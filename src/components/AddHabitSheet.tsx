@@ -65,6 +65,7 @@ export function AddHabitSheet({ open, onClose, onAdd }: AddHabitSheetProps) {
         <div className="flex items-center justify-between mb-6">
           <h2 className="text-lg font-semibold text-foreground">New habit</h2>
           <button
+            aria-label="Close new habit panel"
             onClick={onClose}
             className="w-8 h-8 rounded-full bg-muted flex items-center justify-center hover:bg-muted/80 transition-colors active:scale-95"
           >
