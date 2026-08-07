@@ -11,6 +11,7 @@ export const Route = createRootRoute({
       { title: "Continuum — Build lasting habits" },
       { name: "description", content: "A calm, focused habit tracker. Track streaks, visualize progress, and build your daily ritual." },
       { name: "author", content: "Continuum" },
+      { name: "google-site-verification", content: "H616WuxzUyZoRFiqQjGQ_Wm3OjtprRt7FHWBRF9scG8" },
       { property: "og:title", content: "Continuum — Build lasting habits" },
       { property: "og:description", content: "A calm, focused habit tracker. Track streaks, visualize progress, and build your daily ritual." },
       { property: "og:type", content: "website" },
