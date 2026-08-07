@@ -16,8 +16,12 @@ export const Route = createFileRoute("/insights")({
   head: () => ({
     meta: [
       { title: "Continuum — Insights" },
-      { name: "description", content: "View your habit streaks, completion rates, and 30-day history." },
+      { name: "description", content: "View your habit insights in Continuum: current and longest streaks, completion rates, and a 30-day calendar heatmap of your daily progress." },
+      { property: "og:title", content: "Continuum — Insights" },
+      { property: "og:description", content: "Streaks, completion rates, and a 30-day heatmap of your habit progress." },
+      { property: "og:url", content: "https://ntombienyembezi-ai-assistance.lovable.app/insights" },
     ],
+    links: [{ rel: "canonical", href: "https://ntombienyembezi-ai-assistance.lovable.app/insights" }],
   }),
 });
 

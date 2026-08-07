@@ -11,6 +11,16 @@ async function getSupabase() {
 
 export const Route = createFileRoute("/login")({
   component: LoginPage,
+  head: () => ({
+    meta: [
+      { title: "Sign in — Continuum habit tracker" },
+      { name: "description", content: "Sign in or create a free Continuum account to sync your habits, streaks, and daily progress across all of your devices." },
+      { property: "og:title", content: "Sign in to Continuum" },
+      { property: "og:description", content: "Create a free account to sync your habits and streaks across devices." },
+      { property: "og:url", content: "https://ntombienyembezi-ai-assistance.lovable.app/login" },
+    ],
+    links: [{ rel: "canonical", href: "https://ntombienyembezi-ai-assistance.lovable.app/login" }],
+  }),
 });
 
 function LoginPage() {
@@ -142,6 +152,7 @@ function LoginPage() {
             />
             <button
               type="button"
+              aria-label={showPassword ? "Hide password" : "Show password"}
               onClick={() => setShowPassword(!showPassword)}
               className="absolute right-4 top-1/2 -translate-y-1/2 text-muted-foreground hover:text-foreground"
             >

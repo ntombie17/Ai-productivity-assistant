@@ -35,8 +35,12 @@ export const Route = createFileRoute("/app")({
   head: () => ({
     meta: [
       { title: "Continuum — Your daily ritual" },
-      { name: "description", content: "Build lasting habits with Continuum. Simple streak tracking, beautiful progress visualization." },
+      { name: "description", content: "Your daily ritual in Continuum. Check off today's habits, keep your streaks alive, and watch your progress ring fill up one day at a time." },
+      { property: "og:title", content: "Continuum — Your daily ritual" },
+      { property: "og:description", content: "Check off today's habits, keep your streaks alive, and track your daily progress." },
+      { property: "og:url", content: "https://ntombienyembezi-ai-assistance.lovable.app/app" },
     ],
+    links: [{ rel: "canonical", href: "https://ntombienyembezi-ai-assistance.lovable.app/app" }],
   }),
 });
 

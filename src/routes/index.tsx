@@ -14,6 +14,37 @@ export const Route = createFileRoute("/")({
     meta: [
       { title: "Continuum — Build lasting habits, one day at a time" },
       { name: "description", content: "A calm, focused habit tracker. Track streaks, visualize progress, and build your daily ritual. Free, ad-free, distraction-free." },
+      { property: "og:title", content: "Continuum — Build lasting habits, one day at a time" },
+      { property: "og:description", content: "A calm, focused habit tracker. Track streaks, visualize progress, and build your daily ritual." },
+      { property: "og:url", content: "https://ntombienyembezi-ai-assistance.lovable.app/" },
+    ],
+    links: [{ rel: "canonical", href: "https://ntombienyembezi-ai-assistance.lovable.app/" }],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "SoftwareApplication",
+          name: "Continuum",
+          applicationCategory: "HealthApplication",
+          operatingSystem: "Web",
+          url: "https://ntombienyembezi-ai-assistance.lovable.app/",
+          description:
+            "A calm, focused habit tracker with streaks, a calendar heatmap, reminders, and cloud sync.",
+          offers: { "@type": "Offer", price: "0", priceCurrency: "USD" },
+          aggregateRating: {
+            "@type": "AggregateRating",
+            ratingValue: "5",
+            reviewCount: String(reviews.length),
+          },
+          review: reviews.map((r) => ({
+            "@type": "Review",
+            author: { "@type": "Person", name: r.name },
+            reviewRating: { "@type": "Rating", ratingValue: String(r.rating), bestRating: "5" },
+            reviewBody: r.quote,
+          })),
+        }),
+      },
     ],
   }),
 });

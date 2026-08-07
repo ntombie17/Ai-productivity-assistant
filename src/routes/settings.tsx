@@ -20,8 +20,12 @@ export const Route = createFileRoute("/settings")({
   head: () => ({
     meta: [
       { title: "Continuum — Settings" },
-      { name: "description", content: "Customize your Continuum experience." },
+      { name: "description", content: "Customize your Continuum experience: manage account preferences, choose your theme, configure reminders, and export or import your habit data." },
+      { property: "og:title", content: "Continuum — Settings" },
+      { property: "og:description", content: "Manage your theme, reminders, account, and habit data backups in Continuum." },
+      { property: "og:url", content: "https://ntombienyembezi-ai-assistance.lovable.app/settings" },
     ],
+    links: [{ rel: "canonical", href: "https://ntombienyembezi-ai-assistance.lovable.app/settings" }],
   }),
 });
 
